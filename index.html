@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Special Surprise for Begam</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Confetti library for unboxing celebration -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="petals-container" id="petals"></div>
+
+  <main class="app-viewport">
+    
+    <!-- PAGE 1: SLIDER LOCK -->
+    <section class="card-screen active" id="page-lock">
+      <div class="glass-panel text-center">
+        <div class="sparkle-badge">Wahaj's Heart Lock</div>
+        <h1 class="title">Munazzah, You Hold The Key</h1>
+        <p class="subtitle">Drag the golden key across the path to unlock your surprise!</p>
+
+        <div class="slider-wrapper">
+          <div class="slider-track" id="sliderTrack">
+            <div class="track-bg-fill" id="trackFill"></div>
+            <div class="slider-label" id="sliderLabel">Slide key to unlock ❤️</div>
+            <div class="slider-handle" id="sliderHandle">
+              <span class="key-icon">🗝️</span>
+            </div>
+            <div class="lock-target" id="lockTarget">🔒</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: INTERACTIVE FLIP JOURNEY -->
+    <section class="card-screen" id="page-journey">
+      <div class="glass-panel text-center">
+        <div class="sparkle-badge">Chapter 1 : The Secret Hunt</div>
+        <h2 class="title">Safar ke Moments</h2>
+        <p class="subtitle">"Tap the card to reveal the secret note! 👇"</p>
+
+        <div class="flip-cards-grid">
+          <!-- Flip Card 1 -->
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="card-emoji">🚗💨</div>
+                <h3>Secret Mission</h3>
+                <span class="tap-hint">(Tap to flip)</span>
+              </div>
+<div class="flip-card-back">
+  <h4>Dil Ka Secret Mission 💕</h4>
+  <p>Puri market ghoomte waqt mere zehen mein bas ek hi khayal tha ke jab meri jaan ye box kholegi, to uski aankhon mein wo chamak aur honton pe wo muskurahat kaisi hogi hayeeeeeee!</p>
+</div>
+            </div>
+          </div>
+
+          <!-- Flip Card 2 -->
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="card-emoji">📱✨</div>
+                <h3>The Best Ones</h3>
+                <span class="tap-hint">(Tap to flip)</span>
+              </div>
+              <div class="flip-card-back">
+                <h4>Shortlisting</h4>
+                <p>Har ek phone ka camera aur design dekha, lekin mujhy pata tha ke mere betuuuuuu ko konsa phone chaiyeee.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <p class="journey-note" style="margin: 25px 0 20px 0;">✨ han to kia khayal hai begammm ❤️️</p>
+        <button class="primary-btn mt-4" id="btnToChoice">
+          Ageyyy chalen phir ❤️❤️ ➔
+        </button>
+      </div>
+    </section>
+
+   <!-- PAGE 3: PHONE SHOWROOM (PIXEL 8 PRO COLORS) -->
+    <section class="card-screen" id="page-choice">
+      <div class="glass-panel text-center">
+        <div class="sparkle-badge">Google Pixel 8 Pro</div>
+        <h2 class="title">Konsa Color Begam?</h2>
+        <p class="subtitle">Pixel 8 Pro ke do classic shades—aapko konsa sabse pyara lagta hai?</p>
+
+        <div class="phones-grid">
+          <!-- Option 1: Obsidian Black -->
+          <div class="phone-card" data-phone="Google Pixel 8 Pro (Obsidian Black)">
+            <div class="phone-badge">Bold & Elegant</div>
+            <div class="phone-icon">🖤</div>
+            <h3 class="phone-name">Obsidian Black</h3>
+            <p class="phone-color">Pixel 8 Pro</p>
+            <ul class="specs-list">
+              <li>✨ Matte Glass Finish</li>
+              <li>📸 Pro Triple Camera Setup</li>
+              <li>⚡ Sleek Dark Luxury Look</li>
+            </ul>
+            <button class="select-btn">Choose Obsidian ➔</button>
+          </div>
+
+          <!-- Option 2: Porcelain White -->
+          <div class="phone-card" data-phone="Google Pixel 8 Pro (Porcelain White)">
+            <div class="phone-badge">Pure Aesthetic</div>
+            <div class="phone-icon">🤍</div>
+            <h3 class="phone-name">Porcelain White</h3>
+            <p class="phone-color">Pixel 8 Pro</p>
+            <ul class="specs-list">
+              <li>✨ Glossy Camera Visor</li>
+              <li>🔮 Magic AI & Best Portraits</li>
+              <li>🌸 Soft Clean Aesthetic Vibe</li>
+            </ul>
+            <button class="select-btn">Choose Porcelain ➔</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: TAP-TO-UNBOX GIFT -->
+    <section class="card-screen" id="page-unboxing">
+      <div class="glass-panel text-center">
+        <div class="sparkle-badge">Locked In!</div>
+        <h2 class="title">Aapka Parcel Ready Hai</h2>
+        <p class="subtitle">Box par tap karo taake gift unbox ho sake! 🎁</p>
+
+        <div class="box-wrapper" id="giftBox">
+          <div class="box-lid" id="boxLid">
+            <div class="ribbon-bow">🎀</div>
+          </div>
+          <div class="box-body">
+            <span class="box-text">TAP ME</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: LOVE NOTE & WHATSAPP TRIGGER -->
+    <section class="card-screen" id="page-reveal">
+      <div class="glass-panel text-center">
+        <div class="sparkle-badge">Unlocked Forever</div>
+        <h2 class="title" id="chosenPhoneTitle">Your Surprise</h2>
+
+        <div class="letter-box">
+          <p class="letter-intro">Meri Jaan,Mera betuuu or Meri Begam Munazzah ❤️</p>
+          <p class="letter-body">
+            Begammmmm finally apka 8 pro agayaa hai bhiii,or begam sorry apko inna intezar karwaya lekin Alhamdulillah, aapke chehre ki woh pyari si smile hayeeee.
+            Aap meri zindagi ka sabse khoobsurat hissa ho, aur aapki har pasand mere liye sabse pehle hai, I LOVE YOU SOOOOOOOOO MUCH❤️❤️❤️
+          </p>
+          <p class="letter-sign">Hamesha Aapka,<br><strong>Wahaj 💕</strong></p>
+        </div>
+
+         <p class="journey-note" style="margin: 25px 0 20px 0;">✨ Han to begammm saheba apny 8pro ka color select karke is button pe click karen  ❤️️</p>
+        <button class="whatsapp-btn" id="btnWhatsapp">
+          <span class="wa-icon">💬</span>
+          <span>Kia soch rahin han meri piyari begam dabaden button💕💕</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
